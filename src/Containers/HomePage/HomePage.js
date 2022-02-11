@@ -1,11 +1,11 @@
 import React from 'react';
 
-const GenrePage = () => {
+const HomePage = () => {
     return (
         <div>
-            dasd
+            asdasd
         </div>
     );
 };
 
-export default GenrePage;
+export default HomePage;

@@ -2,11 +2,12 @@ import React, {useCallback, useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {getAllMovies} from "../../slaice";
 import MoviesList from "../../Component/MoviesList/MoviesList";
+import {Outlet} from 'react-router-dom'
 
 const MoviesPage = () => {
 
     const {results} = useSelector(store => store.movie.movies);
-    console.log(results);
+
     const page = useSelector(store => store.movie.page);
     const dispatch = useDispatch();
     useEffect(() => {
@@ -28,11 +29,16 @@ const MoviesPage = () => {
                     results && results.map(movie => <MoviesList key={movie.id} movie={movie}/>)
                 }
             </div>
-<div>
 
-    <button onClick={back}>BackPage</button>
-    <button onClick={forward}>nextPage</button>
-</div>
+            <div>
+                <Outlet/>
+            </div>
+            <div>
+
+                <button onClick={back}>BackPage</button>
+                <button onClick={forward}>nextPage</button>
+            </div>
+
         </div>
     );
 };

@@ -17,20 +17,12 @@ export const getAllMovies = createAsyncThunk(
 const moviesSlice = createSlice({
     name: 'moviesSlice',
     initialState,
-    reducer: {},
     extraReducers: {
-        [getAllMovies.pending]: (state) => {
-
-        },
         [getAllMovies.fulfilled]: (state, action) => {
             state.status = 'fulfilled'
             state.movies = action.payload
             state.page = action.payload.page
         },
-        [getAllMovies.rejected]: (state, action) => {
-
-        }
-
     }
 });
 

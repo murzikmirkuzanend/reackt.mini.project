@@ -1,11 +1,11 @@
 import React from 'react';
 
-const GenrePage = () => {
+const MoviesListCard = () => {
     return (
         <div>
-            dasd
+
         </div>
     );
 };
 
-export default GenrePage;
+export default MoviesListCard;

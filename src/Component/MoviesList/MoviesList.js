@@ -1,19 +1,24 @@
 import React from 'react';
-import {imageUrl} from "../../urls";
+import {imageUrlW300} from "../../urls";
+import {NavLink} from "react-router-dom";
 
 const MoviesList = ({movie}) => {
 
-    const {backdrop_path, original_title, vote_average} = movie;
+    const {id, backdrop_path, original_title, vote_average} = movie;
 
 
     return (
         <div>
             <div>
-                <div>
-                    <img src={imageUrl + backdrop_path} alt='poster'/>
-                </div>
-                <div>{original_title}</div>
-                <div>{vote_average}</div>
+                <NavLink to={id.toString()} state={movie}>
+
+                    <div>
+                        <img src={imageUrlW300 + backdrop_path} alt='poster'/>
+                    </div>
+                    <div>{original_title}</div>
+                    <div>{vote_average}</div>
+                    
+                </NavLink>
 
             </div>
 

@@ -10,5 +10,4 @@ export const urls ={
 
     moviesId:(id)=>`/movie/${id}?api_key=${apiKey}`,
 
-    // genres:`/genre/movie/list?api_key=${apiKey}&language=en-US`
 }
