@@ -10,8 +10,8 @@ const initialState = {
 export const getAllMovies = createAsyncThunk(
     'moviesSlice/getAllMovies',
     async (page) => {
-        const movies = await moviesService.getAll(page);
-        return movies
+        const moviesAll = await moviesService.getAll(page);
+        return moviesAll
     }
 )
 const moviesSlice = createSlice({

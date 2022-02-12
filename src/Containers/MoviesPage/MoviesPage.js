@@ -1,8 +1,12 @@
 import React, {useCallback, useEffect} from 'react';
+
 import {useDispatch, useSelector} from "react-redux";
+
+import {Outlet} from 'react-router-dom'
+
 import {getAllMovies} from "../../slaice";
 import MoviesList from "../../Component/MoviesList/MoviesList";
-import {Outlet} from 'react-router-dom'
+
 
 const MoviesPage = () => {
 
@@ -12,7 +16,7 @@ const MoviesPage = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getAllMovies(page))
-    }, [])
+    }, [page])
 
     const forward = useCallback(() => {
         dispatch(getAllMovies(page + 1))

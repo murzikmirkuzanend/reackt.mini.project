@@ -10,8 +10,10 @@ const Header = () => {
                 <NavLink to="/">
                     <button>Home</button>
                 </NavLink>
-
-                <NavLink to="/genre">
+                <NavLink to='/movies'>
+                    Movie
+                </NavLink>
+                <NavLink to="/genres">
                     <button>Genre</button>
                 </NavLink>
             </div>

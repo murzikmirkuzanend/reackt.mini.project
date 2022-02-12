@@ -1,2 +1,3 @@
-export * from './urls';
-export * from './image.url'
+export * from './urlsAll';
+export * from './image.url';
+export * from './baseUrls'

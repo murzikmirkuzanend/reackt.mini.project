@@ -21,7 +21,6 @@ const movieSlice = createSlice({
         [getOneMovie.fulfilled]: (state, action) => {
             state.status = 'fulfilled'
             state.movie = action.payload
-
         }
     }
 })

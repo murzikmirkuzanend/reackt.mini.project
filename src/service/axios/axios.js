@@ -1,7 +1,10 @@
 import axios from "axios";
+import baseURL from "../../urls/baseUrls";
 
-import baseURL from "../../urls/urls";
+
 
 export const axiosServiceMovies = axios.create({
-    baseURL:baseURL
+    baseURL
+
+
 });

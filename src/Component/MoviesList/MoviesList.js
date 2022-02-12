@@ -1,6 +1,7 @@
 import React from 'react';
 import {imageUrlW300} from "../../urls";
 import {NavLink} from "react-router-dom";
+import Header from "../Header/Header";
 
 const MoviesList = ({movie}) => {
 
@@ -9,6 +10,7 @@ const MoviesList = ({movie}) => {
 
     return (
         <div>
+
             <div>
                 <NavLink to={id.toString()} state={movie}>
 
