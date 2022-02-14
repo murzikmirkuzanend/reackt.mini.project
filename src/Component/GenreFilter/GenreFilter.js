@@ -31,20 +31,22 @@ const GenreFilter = () => {
 
     return (
         <div className={'genreFilter'}>
-            <div >
+            <div>
                 <div className={'genreFilterIdOne'}>
                     {
                         results && results.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)
                     }
                 </div>
 
-               <Outlet/>
+                <Outlet/>
             </div>
             <div className={'genreButton'}>
                 <button onClick={back}><span>Back Page</span>
-                    <div className="liquid"></div></button>
+                    <div className="liquid"></div>
+                </button>
                 <button onClick={forward}><span>Forward Page</span>
-                    <div className="liquid"></div></button>
+                    <div className="liquid"></div>
+                </button>
             </div>
             <div className={'bottomGenre'}> .</div>
         </div>

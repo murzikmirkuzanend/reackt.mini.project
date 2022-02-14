@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useParams} from "react-router-dom";
 
 import {getOneMovie} from "../../slaice";
-import { imageUrlW500} from "../../urls";
+import {imageUrlW500} from "../../urls";
 import StarRating from "../StarsRating/StarRating";
 import {Header} from "../Header/Header";
 import './MovieInfo.css'
@@ -46,8 +46,8 @@ const MovieInfo = () => {
                             <StarRating/>
                         </div>
                         <div className={'h4'}><h4>{original_title}</h4>
-                        <div>{release_date}</div>
-                        <div>{original_language}</div>
+                            <div>{release_date}</div>
+                            <div>{original_language}</div>
                         </div>
 
                     </div>

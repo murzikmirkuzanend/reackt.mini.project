@@ -9,7 +9,7 @@ const GenreBadge = ({genre: {id, name}}) => {
         <div className={'genreFilterID'}>
             <NavLink to={id.toString()}>
 
-                <div >{name}</div>
+                <div>{name}</div>
             </NavLink>
         </div>
     );

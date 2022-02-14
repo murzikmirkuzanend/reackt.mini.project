@@ -24,9 +24,9 @@ const App = () => {
                 <Route path={'/:id'} element={<MovieInfo/>}/>
             </Routes>
 
-<div className={'down'}>
-    <DownInfo/>
-</div>
+            <div className={'down'}>
+                <DownInfo/>
+            </div>
         </div>
     )
         ;

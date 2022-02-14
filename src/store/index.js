@@ -1,1 +1,1 @@
-export * from './redux/redux'
+export * from './redux/redux';

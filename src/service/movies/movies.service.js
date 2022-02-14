@@ -1,7 +1,6 @@
 import {axiosServiceMovies} from "../axios/axios";
 import {urlsAll} from "../../urls";
 
-
 export const moviesService = {
 
     getAll: (page) => axiosServiceMovies.get(urlsAll.movies(page))
@@ -13,6 +12,6 @@ export const moviesService = {
     getAllGenres: () => axiosServiceMovies.get(urlsAll.genres)
         .then(value => value.data),
 
-    getGenreById:(id,page)=>axiosServiceMovies.get(urlsAll.genresId(id,page))
-        .then(value => value.data),
+    getGenreById: (id, page) => axiosServiceMovies.get(urlsAll.genresId(id, page))
+        .then(value => value.data)
 }

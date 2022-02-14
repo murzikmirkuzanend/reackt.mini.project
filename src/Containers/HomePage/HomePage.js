@@ -22,7 +22,6 @@ const HomePage = () => {
             <div className={'results'}>
                 {
                     results && results.map(movie => <MoviesList key={movie.id} movie={movie}/>)
-
                 }
             </div>
             <div className={'bottom'}>.</div>

@@ -4,7 +4,7 @@ const DownInfo = () => {
     return (
         <div>
 
-            <div >
+            <div>
                 Thank you all, @OlegSaikevych
             </div>
 

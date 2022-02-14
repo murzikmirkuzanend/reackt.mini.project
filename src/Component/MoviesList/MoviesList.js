@@ -28,4 +28,4 @@ const MoviesList = ({movie}) => {
     );
 };
 
-export  {MoviesList};
+export {MoviesList};
