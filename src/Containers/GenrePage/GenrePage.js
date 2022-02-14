@@ -2,7 +2,8 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {Outlet} from 'react-router-dom'
 import {getGenres} from "../../slaice";
-import GenreBadge from "../../Component/GenreBadge/GenreBadge";
+import {GenreBadge} from "../../Component";
+import './GenerPage.css'
 
 const GenrePage = () => {
 
@@ -16,16 +17,18 @@ const GenrePage = () => {
     }, [])
 
     return (
-        <div>
-            {
-                genres && genres.map(genre => <GenreBadge key={genre.id} genre={genre}/>)
-            }
-            <Outlet/>
-            <div>
-
+        <div className={'genrePagePhaser'}>
+            <div className={'genrePage'}>
+                {
+                    genres && genres.map(genre => <GenreBadge key={genre.id} genre={genre}/>)
+                }
             </div>
+            <div className={'outlet'}>
+                <Outlet/>
+            </div>
+
         </div>
     );
 };
 
-export default GenrePage;
+export {GenrePage};

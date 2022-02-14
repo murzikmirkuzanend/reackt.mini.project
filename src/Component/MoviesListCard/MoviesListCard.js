@@ -26,4 +26,4 @@ const MoviesListCard = ({movie}) => {
     );
 }
 
-export default MoviesListCard;
+export  {MoviesListCard};

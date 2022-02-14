@@ -5,8 +5,9 @@ import {useDispatch, useSelector} from "react-redux";
 import {Outlet} from 'react-router-dom'
 
 import {getAllMovies} from "../../slaice";
-import MoviesList from "../../Component/MoviesList/MoviesList";
+import {MoviesList} from "../../Component";
 
+import './MoviesPage.css'
 
 const MoviesPage = () => {
 
@@ -27,8 +28,8 @@ const MoviesPage = () => {
     }, [page]);
 
     return (
-        <div>
-            <div>
+        <div className={'moviePage'}>
+            <div className={'resultsPage'}>
                 {
                     results && results.map(movie => <MoviesList key={movie.id} movie={movie}/>)
                 }
@@ -37,14 +38,17 @@ const MoviesPage = () => {
             <div>
                 <Outlet/>
             </div>
-            <div>
+            <div className={'bottomMovies'}>
 
-                <button onClick={back}>BackPage</button>
-                <button onClick={forward}>nextPage</button>
+                <button onClick={back}><span>Back Page</span>
+                    <div className="liquid"></div></button>
+                <button onClick={forward}><span>Forward Page</span>
+                    <div className="liquid"></div></button>
             </div>
+            <div className={'bottomPage'}>.</div>
 
         </div>
     );
 };
 
-export default MoviesPage;
+export  {MoviesPage};

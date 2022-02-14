@@ -1,0 +1,34 @@
+
+
+
+.genreFilterIdOne{
+    font-size: 15px;
+    font-weight: normal;
+    cursor: pointer;
+    text-shadow: 1px 1px white,
+    2px 2px #777;
+    color: #333;
+    transition: all 1s;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    column-gap: 10px;
+}
+.genreFilterIdOne:hover {
+    text-shadow: 1px 1px white,
+    2px 2px tomato;
+    color: crimson;
+}
+
+
+.bottomGenre{
+    height: 953px;
+    margin-top: -949px;
+    background: black;
+}
+.genreButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+}

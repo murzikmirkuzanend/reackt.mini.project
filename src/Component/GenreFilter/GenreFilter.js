@@ -1,9 +1,11 @@
 import React, {useCallback, useEffect} from 'react';
-import {useParams,Outlet} from "react-router-dom";
+import {useParams, Outlet} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 
-import {getGenresFilter} from "../../slaice/genreSliceFilter/GenreSliceFilter";
-import MoviesListCard from "../MoviesListCard/MoviesListCard";
+import {getGenresFilter} from "../../slaice";
+import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
+
+import './GenreFilter.css'
 
 const GenreFilter = () => {
 
@@ -16,31 +18,37 @@ const GenreFilter = () => {
 
     useEffect(() => {
         dispatch(getGenresFilter(id, page))
-    }, [id,page])
+    }, [id, page])
 
     const forward = useCallback(() => {
-        dispatch(getGenresFilter(page + 1))
+        dispatch(getGenresFilter({id, page: page + 1}))
     }, [page])
 
     const back = useCallback(() => {
-        dispatch(getGenresFilter(page - 1))
+        dispatch(getGenresFilter({id, page: page - 1}))
     }, [page]);
 
 
     return (
-        <div>
-<div>
-    {
-        results && results.map(movie=><MoviesListCard key={movie.id} movie={movie}/>)
-    }
-</div>
-            <div><Outlet/></div>
-            <div>
-                <button onClick={back}>BackPage</button>
-                <button onClick={forward}>nextPage</button>
+        <div className={'genreFilter'}>
+            <div >
+                <div className={'genreFilterIdOne'}>
+                    {
+                        results && results.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)
+                    }
+                </div>
+
+               <Outlet/>
             </div>
+            <div className={'genreButton'}>
+                <button onClick={back}><span>Back Page</span>
+                    <div className="liquid"></div></button>
+                <button onClick={forward}><span>Forward Page</span>
+                    <div className="liquid"></div></button>
+            </div>
+            <div className={'bottomGenre'}> .</div>
         </div>
     );
 };
 
-export default GenreFilter;
+export {GenreFilter};

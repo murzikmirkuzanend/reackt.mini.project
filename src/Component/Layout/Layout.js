@@ -1,6 +1,7 @@
 import React from 'react';
-import Header from "../Header/Header";
 import {Outlet} from "react-router-dom";
+
+import {Header} from "../Header/Header";
 
 const Layout = () => {
     return (
@@ -13,4 +14,4 @@ const Layout = () => {
     );
 };
 
-export default Layout;
+export {Layout};

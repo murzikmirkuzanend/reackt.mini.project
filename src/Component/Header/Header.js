@@ -1,27 +1,33 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
+import './Header.css'
 
 const Header = () => {
+
     return (
         <div>
-            <div>
-                <h3>Welcome to you Cinema</h3>
+            <div className={'headerPhaser'}>
+                <h3 className={'h3'}>Welcome to you Cinema</h3>
 
-                <NavLink to="/">
-                    <button>Home</button>
+                <NavLink to="/" className={'home'}>
+                    Home
                 </NavLink>
-                <NavLink to='/movies'>
+                <NavLink to='/movies' className={'movie'}>
                     Movie
                 </NavLink>
-                <NavLink to="/genres">
-                    <button>Genre</button>
+                <NavLink to="/genres" className={'genre'}>
+                    Genre
                 </NavLink>
-            </div>
-            <div>
 
+                <div className='search'><input className='search-inp' type="search" placeholder='search...'/></div>
+
+            </div>
+
+            <div>
+<hr/>
             </div>
         </div>
     );
 };
 
-export default Header;
+export {Header};

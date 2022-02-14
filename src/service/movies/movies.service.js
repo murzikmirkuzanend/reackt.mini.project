@@ -12,6 +12,7 @@ export const moviesService = {
 
     getAllGenres: () => axiosServiceMovies.get(urlsAll.genres)
         .then(value => value.data),
+
     getGenreById:(id,page)=>axiosServiceMovies.get(urlsAll.genresId(id,page))
-        .then(value => value.data)
+        .then(value => value.data),
 }

@@ -1,0 +1,66 @@
+
+
+.headerPhaser{
+    display: flex;
+    align-items: center;
+    margin: 25px;
+    justify-content: center;
+
+}
+.h3{
+    margin-right: 50%;
+
+    font-size: 25px;
+    font-weight: normal;
+    text-shadow: -8px -8px 0 hsl(0, 0%, 2%),
+    -7px -7px 0 hsl(0, 0%, 99%),
+    -6px -6px 0 hsl(292, 100%, 35%),
+    -5px -5px 0 hsl(292, 100%, 35%),
+    -4px -4px 0 hsl(292, 100%, 35%),
+    -3px -3px 0 hsl(292, 100%, 35%),
+    -2px -2px 0 hsl(292, 100%, 35%),
+    -1px -1px 0 hsl(292, 100%, 35%),
+    0 0 0 hsl(292, 100%, 35%);
+    color: transparent;
+    transition: all 1s;
+}
+.h3:hover {
+    text-shadow: -8px 8px 0 hsl(0, 0%, 3%),
+    -7px 7px 0 hsl(80,100%,55%),
+    -6px 6px 0 hsl(80,100%,60%),
+    -5px 5px 0 hsl(80,100%,65%),
+    -4px 4px 0 hsl(80,100%,70%),
+    -3px 3px 0 hsl(80,100%,75%),
+    -2px 2px 0 hsl(80,100%,80%),
+    -1px 1px 0 hsl(80,100%,85%),
+    0 0 0 hsl(80,100%,95%);
+    color: transparent;
+    font-size: 25px;
+
+}
+
+
+
+
+
+.home, .movie, .genre {
+    text-shadow:
+            1px 1px 0 #9B00B3FF,
+            1px -1px 0 #9B00B3FF,
+            -1px 1px 0 #9B00B3FF,
+            -1px -1px 0 #9B00B3FF;
+    color: black;
+    transition: all 1s;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.home:hover, .movie:hover, .genre:hover {
+    text-shadow:
+            1px 1px 0 yellowgreen,
+            1px -1px 0 yellowgreen,
+            -1px 1px 0 yellowgreen,
+            -1px -1px 0 yellowgreen;
+}
+
+

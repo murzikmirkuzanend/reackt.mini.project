@@ -1,0 +1,31 @@
+.homePage{
+
+    background: url("https://wallpaperaccess.com/full/288727.jpg") no-repeat;
+
+}
+
+
+.results{
+    display: flex;
+    column-gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row-reverse;
+    font-size: 20px;
+    font-weight: normal;
+    cursor: pointer;
+    text-shadow: 1px 1px white,
+    2px 2px #777;
+    color: #333;
+    transition: all 1s;
+}
+.results:hover {
+    text-shadow: 1px 1px white,
+    2px 2px tomato;
+    color: crimson;
+}
+.bottom{
+    background: black;
+    height: 877px;
+    margin-top: -910px;
+}

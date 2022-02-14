@@ -1,0 +1,81 @@
+
+.movieInfo {
+
+    position: relative;
+    letter-spacing: .05em;
+    font-size: 20px;
+    cursor: pointer;
+    text-shadow: 1px 1px #ab01ce,
+    -1px 1px #a402b7,
+    -1px -1px #7802bd,
+    1px -1px #8502b9;
+    color: white;
+    transition: all 1s;
+    background: url("https://wallpaperaccess.com/full/288727.jpg") no-repeat;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 810px;
+
+}
+.movieInfo:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(-45deg,
+    rgba(72, 209, 204, 0) 2px,
+    mediumturquoise 3px,
+    rgba(72, 209, 204, 0) 3px ) repeat;
+    background-size: 4px 4px;
+}
+.movieInfo:after {
+    content: attr(data-name);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: -2;
+    text-shadow: 1px 1px white,
+    2px 2px white,
+    3px 3px white,
+    4px 4px white;
+    color: white;
+    transition: all 1s;
+}
+.movieInfo:hover {
+    color: lemonchiffon;
+}
+.movieInfo:hover:before {
+    animation: 5s move_lines infinite linear;
+}
+.movieInfo:hover:after {
+    color: lemonchiffon;
+    text-shadow: 1px 1px lemonchiffon,
+    2px 2px lemonchiffon,
+    3px 3px lemonchiffon,
+    4px 4px lemonchiffon;
+}
+
+
+
+@keyframes move_lines {
+    100% {
+        background-position: 40px 40px;
+    }
+}
+.allText{
+    display: flex;
+    column-gap: 15px;
+
+}
+
+.stars{
+
+    margin-left: -911px;
+    margin-top: 150px;
+
+}
+.h4{
+    margin-left: -1300px;
+}
